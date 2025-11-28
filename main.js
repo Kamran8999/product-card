@@ -44,7 +44,7 @@ function outputConsoleLog(message) {
 
 const pageTitle = document.querySelector('.title-catalog')
 
-pageTitle.addEventListener('mouseover', function () {
+pageTitle.addEventListener('mouseover', function() {
   console.log(pageTitle.textContent)
 })
 
@@ -54,5 +54,5 @@ pageTitle.addEventListener('mouseover', function () {
 const colorToggleButton = document.querySelector('#button-changing-color')
 
 colorToggleButton.addEventListener('click', () => {
-  colorToggleButton.classList.toggle('active');
+  colorToggleButton.classList.toggle('bg-turquoise');
 })
