@@ -35,7 +35,7 @@ compareSpeed(299)
 const productName = "Молоко"
 const productPrice = 89
 
-const purchasingProduct = (myBudget) => {
+const buyProduct = (myBudget) => {
   if (myBudget > productPrice) {
     const surplus = myBudget - productPrice
     console.log(`${productName} приобретено, ваш баланс ${surplus} рублей. Спасибо за покупку!`)
@@ -45,7 +45,7 @@ const purchasingProduct = (myBudget) => {
   }
 }
 
-purchasingProduct(120)
+buyProduct(120)
 
 
 /* 6 - Создать 1 функцию и именовать её по своему усмотрению */
@@ -65,4 +65,4 @@ const сheckingMachineSpeed = (carSpeed) => {
   }
 }
 
-сheckingMachineSpeed(20)
+сheckingMachineSpeed(120)
