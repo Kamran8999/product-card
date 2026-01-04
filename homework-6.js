@@ -40,7 +40,7 @@ addMaxSpeed(car)
 /* 6 - Написать функцию, которая получает первым аргументом  — объект, 
 а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение. */
 
-const getAircraftInfo = (airplane, model) => {
+const outputAircraftInfo = (airplane, model) => {
   console.log(airplane[model])
 }
 
@@ -48,7 +48,7 @@ const airplaneInfo = {
   model: "Airbus 380-800"
 }
 
-getAircraftInfo(airplaneInfo, "model")
+outputAircraftInfo(airplaneInfo, "model")
 
 /* 7 - Создать массив, который содержит названия продуктов (строки) */
 
@@ -153,15 +153,10 @@ console.log(allFootballTeams)
 /* 10 - Написать функцию, которая принимает массив сущностей с предыдущего задания. 
 Далее добавить новое свойство "isRare" для объекта, которая будет принимать true или false в зависимости от года создания команды. */
 
- const isFootballTeamOld =  (oldClub) => {
-  return oldClub.map((allFootballTeams)=> {
+ const isFootballTeamOld = (oldClub) => {
+  return oldClub.map(allFootballTeams => {
     
-    if (allFootballTeams.dateFoundation < 1900) {
-      allFootballTeams.isOld = true 
-    } else {
-      allFootballTeams.isOld = false
-    }
-    
+    allFootballTeams.isOld = allFootballTeams.dateFoundation < 1900
     return allFootballTeams
   })
  }
