@@ -153,7 +153,7 @@ console.log(allFootballTeams)
 /* 10 - Написать функцию, которая принимает массив сущностей с предыдущего задания. 
 Далее добавить новое свойство "isRare" для объекта, которая будет принимать true или false в зависимости от года создания команды. */
 
- const isFootballTeamOld = (oldClub) => {
+const isFootballTeamOld = (oldClub) => {
   return oldClub.map(allFootballTeams => {
     
     allFootballTeams.isOld = allFootballTeams.dateFoundation < 1900
