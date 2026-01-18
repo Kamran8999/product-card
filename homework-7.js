@@ -41,7 +41,8 @@ console.log(commentsWithComEmail)
 а те, у кого id > 5, имели postId: 1 */
 
 const commentsWithUpdatedPostId = userСomments.map(comment => {
-  return {...comment, 
+  return {
+    ...comment, 
     postId: comment.id <= 5 ? 2 : 1}
 });
 
