@@ -1,47 +1,62 @@
 export const productCards = [
   {
-    image: "images/moist-mousse.png",
+    image: "moist-mousse",
     category: "для нормальной кожи",
     name: "Увлажняющий мусс",
     description: "Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.",
-    compound: ["активные натуральные комплексы", "витамины С, А, РР, В И Е", "солнцезащитные компоненты"],
-    priceLabel: "Цена",
+    compound: [
+      "активные натуральные комплексы",
+      "витамины С, А, РР, В И Е",
+      "солнцезащитные компоненты"
+    ],
     price: 2750,
   },
   {
-    image: "images/moist-mask.png",
+    image: "moist-mask",
     category: "для нормальной кожи",
     name: "Увлажняющая маска",
     description: "Способствует удерживанию влаги в верхних слоях кожи.",
-    compound: ["воски", "минералы", "масла"],
-    priceLabel: "Цена",
+    compound: [
+      "воски",
+      "минералы",
+      "масла"
+    ],
     price: 3500,
   },
   {
-    image: "images/cleansing-gel.png",
+    image: "cleansing-gel",
     category: "для нормальной кожи",
     name: "Гель для умывания",
     description: "Интенсивно очищает, не повреждает защитный барьер кожи.",
-    compound: ["минералы", "витамины С, А, РР, В И Е", "солнцезащитные компоненты"],
-    priceLabel: "Цена",
+    compound: [
+      "минералы",
+      "витамины С, А, РР, В И Е",
+      "солнцезащитные компоненты"
+    ],
     price: 1650,
   },
   {
-    image: "images/gift-set-1.png",
+    image: "gift-set-1",
     category: "для нормальной кожи",
     name: "Подарочный набор №1",
     description: "Набор, состоящий из увлажняющего крема и маски.",
-    compound: ["воски", "минералы", "масла"],
-    priceLabel: "Цена",
+    compound: [
+      "воски",
+      "минералы",
+      "масла"
+    ],
     price:  4750,
   },
   {
-    image: "images/gift-set-5.png",
+    image: "gift-set-5",
     category: "для нормальной кожи",
     name: "Подарочный набор №5",
     description: "Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.",
-    compound: ["воски", "минералы", "масла"],
-    priceLabel: "Цена",
+    compound: [
+      "воски",
+      "минералы",
+      "масла"
+    ],
     price: 7520,
   },
 ];

@@ -34,12 +34,11 @@ const validateAndSliceProducts = (productCount, products) => {
 const showProducts = (products) => {
   products.forEach(product => {
     const productClone = productTemplate.content.cloneNode(true);
-    productClone.querySelector('.image-product').src = product.image;
+    productClone.querySelector('.image-product').src = `images/${product.image}.png`;
     productClone.querySelector('.product-category').textContent = product.category;
     productClone.querySelector('.product-name').textContent = product.name;
     productClone.querySelector('.product-description').textContent = product.description;
     productClone.querySelector('.product-compound').innerHTML = product.compound.map(item => `<li>${item}</li>`).join("");
-    productClone.querySelector('.product-price-label').textContent = product.priceLabel;
     productClone.querySelector('.product-price').textContent = product.price + " \u20BD";
     productsContainer.appendChild(productClone);
   })
