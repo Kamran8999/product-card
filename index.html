@@ -1,48 +1,141 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
-  <link rel="stylesheet"  href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="content-wrapper">
-    <div class="background_flowers"> 
-      <h1 class="title-catalog">Выбери свой продукт</h1>
-      <div class="button-container">
-        <button id="change-color-first-card" class="button">Сменить цвет первой картчоки</button>
-        <button id="change-color-all-card" class="button">Сменить цвет всех карточек</button>
-        <button id="open-google-button" class="button">Открыть Google.com</button>
-        <button id="output-console-log" class="button">Вывести сообщение в консоль лог</button>
-        <button id="button-changing-color" class="button">Сменить цвет</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="background_flowers">
+        <button class="registration-button">Регистрация</button>
+        <h1 class="title-catalog">Выбери свой продукт</h1>
+        <div class="button-container">
+          <button id="change-color-first-card" class="button">Сменить цвет первой картчоки</button>
+          <button id="change-color-all-card" class="button">Сменить цвет всех карточек</button>
+          <button id="open-google-button" class="button">Открыть Google.com</button>
+          <button id="output-console-log" class="button">Вывести сообщение в консоль лог</button>
+          <button id="button-changing-color" class="button">Сменить цвет</button>
+        </div>
+      </div>
+
+      <ul class="products-container"></ul>
+
+      <template id="product-template">
+        <li class="card-container">
+          <img class="image-product" width="290" height="245" />
+          <span class="product-category"></span>
+          <h3 class="product-name"></h3>
+          <p class="product-description"></p>
+          <span>Состав:</span>
+          <ul class="product-compound"></ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price"></span>
+          </div>
+        </li>
+      </template>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-info">
+            <h2 class="footer-title">Product Cards</h2>
+            <p class="footer-description">
+              У нас самые лучшие продукты для кожи!
+            </p>
+            <div class="footer-icons">
+              <a href="https://web.telegram.org" class="telegram-icons">
+                <img src="images/telegram-icon.svg" width="21" height="17.61">
+              </a>
+              <a href="http://vk.com/">
+                <img src="images/vk-icon.svg" width="24" height="14" />
+              </a>
+            </div>
+          </div>
+          <div class="footer-container-input-email">
+            <p class="footer-subscribe-label">Подпишись на наши акции:</p>
+            <form class="subscribe-form">
+              <input
+                placeholder="Введи Email..."
+                name="email"
+                type="email"
+                required
+                class="subscribe-input"
+              />
+              <button type="submit" class="subscribe-button">Подписаться</button>
+            </form>
+          </div>
+          <div class="footer-links">
+            <p class="footer-links-label">Быстрые ссылки</p>
+            <nav>
+              <ul class="footer-links-list">
+                <li class="footer-links-item">
+                  <a href="#" class="footer-link">Главная</a>
+                </li>
+                <li class="footer-links-item">
+                  <a href="#" class="footer-link">Магазин</a>
+                </li>
+                <li class="footer-links-item">
+                  <a href="#" class="footer-link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="footer-copyright">www.product-cards.com©all right reserve</p>
+      </div>
+    </footer>
+    <div class="registration-modal">
+      <div class="overlay"></div>
+      <div class="registration-modal-window">
+        <button class="close-modal-button">х</button>
+        <h2 class="registration-modal-title">Регистрация</h2>
+        <form class="registration-form">
+          <div class="registration-form-field">
+            <label for="username" class="registration-form-label">Имя</label>
+            <input id="username" placeholder="Введите ваше имя" name="username" type="text" required class="registration-form-input"/>
+          </div>
+          <div class="registration-form-field">
+            <label for="surname" class="registration-form-label">Фамилия</label>
+            <input id="surname" placeholder="Введите ваше фамилию" name="surname" type="text" required class="registration-form-input"/>
+          </div>
+          <div class="registration-form-field">
+            <label for="date-of-birth" class="registration-form-label">Дата рождения</label>
+            <input id="date-of-birth" placeholder="Укажите вашу дату рождения" name="date-of-birth" type="date" required class="registration-form-input"/>
+          </div>
+          <div class="registration-form-field">
+            <label for="login" class="registration-form-label">Логин</label>
+            <input id="login" placeholder="Введите логин" name="login" type="text" required class="registration-form-input"/>
+          </div>
+          <div class="registration-form-field">
+            <label for="password" class="registration-form-label">Придумайте пароль</label>
+            <input id="password" placeholder="Введите пароль" name="password" type="password" required class="registration-form-input"/>
+          </div>
+          <div class="registration-form-field">
+            <label for="repeat-password" class="registration-form-label">Повторите пароль</label>
+            <input id="repeat-password" placeholder="Повторите введенный пароль" name="repeat-password" type="password" required class="registration-form-input"/>
+          </div>
+          <button type="submit" class="registration-form-button">Зарегистрироваться</button>
+        </form>
       </div>
     </div>
-    
-    <ul class="products-container"></ul>
-    
-    <template id="product-template">
-      <li class="card-container">
-        <img class="image-product" width="290" height="245">
-        <span class="product-category"></span>
-        <h3 class="product-name"></h3>
-        <p class="product-description"></p>
-        <span>Состав:</span>
-        <ul class="product-compound"></ul>
-        <div class="product-price-container">
-          <span class="product-price-label">Цена</span>
-          <span class="product-price"></span>
-        </div>
-      </li>
-    </template>
-  </div>
-  <script src="main.js"></script>
-  <script src="homework-5.js"></script>
-  <script src="homework-6.js"></script>
-  <script src="homework-7.js" type="module"></script>
-  <script src="homework-8.js" type="module"></script>
-</body>
+    <script src="main.js"></script>
+    <script src="homework-5.js"></script>
+    <script src="homework-6.js"></script>
+    <script src="homework-7.js" type="module"></script>
+    <script src="homework-8.js" type="module"></script>
+    <script src="homework-9.js" type="module"></script>
+  </body>
 </html>
