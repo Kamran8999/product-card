@@ -3,11 +3,16 @@
 
 const subscribeForm = document.querySelector(".subscribe-form");
 
+const getFormData = (form) => {
+  const formData = new FormData(form);
+  const formValues = Object.fromEntries(formData.entries());
+  return formValues;
+};
+
 subscribeForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const form = event.target;
-  const formData = new FormData(form);
-  const formValues = Object.fromEntries(formData.entries());
+  const formValues = getFormData(form);
   console.log(formValues);
 });
 
@@ -40,14 +45,13 @@ registrationForm.addEventListener('submit', (event) => {
     alert("Регистарция отклонена")
     return;
   };
-  const registrationFormData = new FormData(form);
-  const userData = Object.fromEntries(registrationFormData.entries());
-  if (userData.password !== userData["repeat-password"]) {
+  const formValues = getFormData(form)
+  if (formValues.password !== formValues["repeat-password"]) {
     alert("Пароли не совпадают")
     return;
   };
-  userData.createdOn = new Date(); 
-  user = userData;
-  console.log(userData);
+  formValues.createdOn = new Date(); 
+  user = formValues;
+  console.log(formValues);
   registrationModal.classList.remove('modal-showed');
 });
