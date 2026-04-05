@@ -50,7 +50,7 @@ registrationForm.formElement.addEventListener('submit', (event) => {
   };
   const formData = registrationForm.getFormData(registrationForm.formElement);
   if (formData.password !== formData["repeat-password"]) {
-    alert("Пароли не совпадают")
+    alert("Пароли не совпадают");
     return;
   };
   formData.createdOn = new Date();

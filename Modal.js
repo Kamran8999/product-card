@@ -3,7 +3,7 @@
 который слушает кнопку (крестик) для закрытия модалки и закрывает модалку и вызывать в конструкторе
 */
 
-export class Modal{
+export class Modal {
   constructor(id) {
     this.modalElement = document.getElementById(id);
     this.setupCloseButton();
@@ -24,7 +24,7 @@ export class Modal{
   setupCloseButton() {
     this.modalElement.querySelector(".close-modal-button").addEventListener('click', () => {
       this.close();
-    })
+    });
   };
 };
 

@@ -2,7 +2,7 @@
 Внутри класса должны быть иетоды для получения всех значений формы, 
 для проверки валидности формы, для сброса значений формы. */
 
-export class Form{
+export class Form {
   constructor(id) {
     this.formElement = document.getElementById(id);
   };
