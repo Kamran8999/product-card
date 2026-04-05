@@ -4,17 +4,13 @@
 
 export class Form{
   constructor(id) {
-    this.id = id;
     this.formElement = document.getElementById(id);
   };
   
-  getFormData() { 
-    const inputs = this.formElement.querySelectorAll('input');
-    const formData = {};
-    inputs.forEach((field) => {
-      formData[field.name] = field.value;
-    });
-    return formData;
+  getFormData(form) { 
+    const formData = new FormData(form);
+    const formValues = Object.fromEntries(formData.entries());
+    return formValues;
   };
   
   isValid() {
@@ -23,5 +19,5 @@ export class Form{
   
   reset() {
     this.formElement.reset();
-  }
-}
+  };
+};

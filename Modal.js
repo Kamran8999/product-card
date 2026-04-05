@@ -5,10 +5,9 @@
 
 export class Modal{
   constructor(id) {
-    this.id = id;
     this.modalElement = document.getElementById(id);
     this.setupCloseButton();
-  }
+  };
   
   open() {
     this.modalElement.classList.add('modal-showed');
