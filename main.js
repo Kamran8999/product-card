@@ -7,16 +7,11 @@ import './homework-8.js';
 import './homework-9.js'; 
 import { Airliner } from './Airliner.js';
 import { BusinessJet } from './BusinessJet.js';
-import { Drink } from './Drink.js';
 import { Cafe } from './Cafe.js';
 import { Coffee } from './Coffee.js';
 import { Lemonade } from './lemonade.js';
 import { Tea } from './Tea.js';
 import { Cocktail } from './Сocktail.js';
-
-Drink.Coffee = Coffee;
-Drink.Tea = Tea;
-Drink.Lemonade = Lemonade;
 
 
 const emiratesPlane = new Airliner('Emirates', 'Airbus', 'A380-800', 644);

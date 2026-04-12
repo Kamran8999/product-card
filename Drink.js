@@ -1,6 +1,6 @@
 // 11 ДЗ ООП
 
-export class Drink{
+export class Drink {
   #temperature  
   constructor(name, size, price) {
     this.name = name;
@@ -28,20 +28,8 @@ export class Drink{
     } else console.log("Значение превышает допустимый диапазон");
   };
   
-  #prepareDrink() {
-    if (this instanceof Drink.Coffee) {
-      this.setTemperature(90);
-    } else if (this instanceof Drink.Tea) {
-      this.setTemperature(80);
-    } else if (this instanceof Drink.Lemonade) {
-      this.setTemperature(2);
-    } else {
-      this.setTemperature(1);
-    };
-  };
-  
   serveDrink() {
-    this.#prepareDrink();
+    this.prepareDrink();
     console.log(`Ваш ${this.name} готов!`);
   };
 };

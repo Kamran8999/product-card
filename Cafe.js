@@ -1,6 +1,6 @@
 // 11 ДЗ ООП
 
-export class Cafe{
+export class Cafe {
   constructor(name, location) {
     this.name = name;
     this.location = location;
