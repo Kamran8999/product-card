@@ -9,7 +9,8 @@ export class Coffee extends Drink {
     this.syrup = syrup;
   };
   
-  prepareDrink() {
-    this.setTemperature(90);
+  serveDrink() {
+    super.prepareDrink(90);
+    super.serveDrink();
   };
 };

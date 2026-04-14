@@ -28,8 +28,11 @@ export class Drink {
     } else console.log("Значение превышает допустимый диапазон");
   };
   
+  prepareDrink(temperature) {
+    this.setTemperature(temperature)
+  }
+  
   serveDrink() {
-    this.prepareDrink();
     console.log(`Ваш ${this.name} готов!`);
   };
 };

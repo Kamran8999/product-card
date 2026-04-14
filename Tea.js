@@ -9,7 +9,8 @@ export class Tea extends Drink {
     this.strength = strength;
   };
   
-  prepareDrink() {
-    this.setTemperature(80);
+  serveDrink() {
+    super.prepareDrink(80);
+    super.serveDrink();
   };
 };

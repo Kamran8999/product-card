@@ -9,7 +9,8 @@ export class Lemonade extends Drink {
     this.sparkling = sparkling;
   };
   
-  prepareDrink() {
-    this.setTemperature(5);
+  serveDrink() {
+    super.prepareDrink(5);
+    super.serveDrink();
   };
 };

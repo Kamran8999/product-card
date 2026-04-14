@@ -9,7 +9,8 @@ export class Cocktail extends Drink {
     this.toppings = toppings;
   };
   
-  prepareDrink() {
-    this.setTemperature(2);
+  serveDrink() {
+    super.prepareDrink(2);
+    super.serveDrink();
   };
 };
