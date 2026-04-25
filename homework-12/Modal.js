@@ -11,9 +11,6 @@ export class Modal {
     this.#initClose();
     this.modal.classList.add('modal-showed');
     this.overlay.classList.add('overlay-showed');
-    if (this.shouldCloseOnOverlay) {
-      this.overlay.addEventListener('click', this.close);   
-    };
   };
 
   close = () => { 
@@ -38,5 +35,8 @@ export class Modal {
 
   #initClose() {
     this.closeButton.addEventListener('click', this.close);
+    if (this.shouldCloseOnOverlay) {
+      this.overlay.addEventListener('click', this.close);   
+    };
   };
 };
